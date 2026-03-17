@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📋 Kanban Board</h1>
+            <p class="subtitle">Drag and drop tasks between columns</p>
+        </header>
+
+        <div class="add-task-section">
+            <div class="add-task-form">
+                <input type="text" id="taskInput" placeholder="Enter a new task...">
+                <button id="addTaskBtn">Add Task</button>
+            </div>
+        </div>
+
+        <div class="board">
+            <div class="column" data-column="todo">
+                <div class="column-header">
+                    <span class="column-icon">📝</span>
+                    <h2 class="column-title">To Do</h2>
+                    <span class="task-count" id="todoCount">0</span>
+                </div>
+                <div class="tasks-container" id="todoTasks">
+                    <div class="empty-state">Drop tasks here</div>
+                </div>
+            </div>
+
+            <div class="column" data-column="inprogress">
+                <div class="column-header">
+                    <span class="column-icon">⚡</span>
+                    <h2 class="column-title">In Progress</h2>
+                    <span class="task-count" id="inprogressCount">0</span>
+                </div>
+                <div class="tasks-container" id="inprogressTasks">
+                    <div class="empty-state">Drop tasks here</div>
+                </div>
+            </div>
+
+            <div class="column" data-column="done">
+                <div class="column-header">
+                    <span class="column-icon">✅</span>
+                    <h2 class="column-title">Done</h2>
+                    <span class="task-count" id="doneCount">0</span>
+                </div>
+                <div class="tasks-container" id="doneTasks">
+                    <div class="empty-state">Drop tasks here</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
